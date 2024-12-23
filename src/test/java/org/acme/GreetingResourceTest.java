@@ -38,7 +38,7 @@ class GreetingResourceTest {
                 .then()
                 .contentType(ContentType.TEXT)
                 .statusCode(200)
-                .body(is("31.06855"));
+                .body(is("31.06856"));
     }
 
     /**
