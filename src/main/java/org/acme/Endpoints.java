@@ -25,9 +25,8 @@ public class Endpoints {
     // @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     public String convertKnotsToKm(@PathParam("knots") String knots) {
-        Double kmDouble = Double.parseDouble(knots);
         return Json.createObjectBuilder()
-                .add("value", kmDouble * 1.852)
+                .add("value", Double.parseDouble(knots) * 1.852)
                 .build().toString();
     }
 }
